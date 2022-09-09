@@ -1,6 +1,5 @@
+//required files
 const createHTML = require('./src/createHTML.js')
-
-
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
@@ -31,6 +30,7 @@ const managerQuestions = [{
     name: "officeNumber",
 }]
 
+//employee (Intern and engineer) prompts
 const employeeQuestions = [{
         type: 'list',
         name: 'role',
@@ -46,7 +46,7 @@ const employeeQuestions = [{
     {
         type: 'input',
         name: 'id',
-        message: "What is the employee's ID",
+        message: "What is the employee's ID?",
 
     },
     {
@@ -77,7 +77,7 @@ const employeeQuestions = [{
     }
 ]
 
-
+//creates new manager object using constructor function
 const addManager = () => {
     return inquirer.prompt(managerQuestions)
         .then(managerResponse => {
@@ -89,6 +89,7 @@ const addManager = () => {
         })
 };
 
+//creates new employee object using constructor function(creates either intern or engineer based on data pased to it)
 const addEmployee = () => {
 
     return inquirer.prompt(employeeQuestions)
@@ -127,7 +128,7 @@ const writeFile = data => {
             return;
             // when the profile has been created 
         } else {
-            console.log("Your team profile has been successfully created! Please check out the index.html")
+            console.log("Index.html has been created!")
         }
     })
 };
@@ -136,6 +137,9 @@ addManager()
     .then(addEmployee)
     .then(teamArr => {
         return createHTML(teamArr);
+    })
+    .then(pageHTML => {
+        return writeFile(pageHTML);
     })
     .catch(err => {
         console.log(err);
