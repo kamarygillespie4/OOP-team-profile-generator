@@ -1,7 +1,7 @@
 # OOP-team-profile-generator
 
 ## Description
-This application can be used to develop a professional README.
+This application can be used to generate a team profile html page.
 
 ## Table of Contents
   1. [Installation Instructions](#installation)
