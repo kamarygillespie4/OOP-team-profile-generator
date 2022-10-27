@@ -12,7 +12,7 @@ This application can be used to generate a team profile html page.
   ## Installation
   This application requires no installation.
   ## Usage
-In order to kick off the application, the user must run the command "node index.js" in the terminal. From here the user will be prompted with a series of questions about the manager. Once they have filled out all of the manager's information, They will be asked to either add an inter or an engineer. They can add as many of both of these as they would like. Once they say no to adding another 
+In order to kick off the application, the user must run the command "node index.js" in the terminal. From here the user will be prompted with a series of questions about the manager. Once they have filled out all of the manager's information, They will be asked to either add an intern or an engineer. They can add as many of both of these as they would like. Once they say no to adding another 
 employee, the html file will be generated and can be opened in the browser.
 ### How to test and use the application(video walkthrough)
 [Video tutorial](https://drive.google.com/file/d/1nlZHnFhg6w8eZuKC1fCR_PKzGDPaPe6o/view?usp=sharing)
